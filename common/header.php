@@ -1,5 +1,6 @@
 <!-- Navigation -->
-
+<?php session_start();?>
+<? //echo $_SESSION['Username'] ;?>
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color: #77CCDD;">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -24,12 +25,35 @@
 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> <i class="glyphicon glyphicon-chevron-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="signin.php">Sign in</a></li>
-                        <li><a href="signup.php">Sign up</a></li>
-                        <!--                                <li class="divider"></li>
-                                                        <li><a href="#">About</a></li>-->
-                    </ul>
+                    <?php
+                        if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
+                        {
+                            
+                             ?>
+                             
+                                <ul class="dropdown-menu">
+                                    <li>Hello !! <?=$_SESSION['Username']?></li>
+                                    <li><a href="index.php">Log Out</a></li>
+                        
+                                </ul>
+
+                             
+                             <?php
+                        }
+                        else{
+                            ?>
+                                <ul class="dropdown-menu">
+                                    <li><a href="signin.php">Sign in</a></li>
+                                    <li><a href="signup.php">Sign up</a></li>
+                        
+                                </ul>
+                             
+                           <?php
+                            
+                        }
+
+                    ?>
+                    
                 </li>
             </ul>
         </div>

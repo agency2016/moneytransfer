@@ -35,7 +35,7 @@
                     <!--                    <h1>One Page Wonder</h1>
                                         <h2>Will Knock Your Socks Off</h2>-->
 
-                    <div class="row" style="margin-top: -80px;">
+<!--                    <div class="row" style="margin-top: -80px;">
                         <div class="col-lg-4 col-sm-12">
                             <form>
                                 <div class="form-group">
@@ -47,7 +47,7 @@
                                 <button type="submit" class="btn btn-default btn-lg btn-block btn-success">Log in</button>
                             </form>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </header>

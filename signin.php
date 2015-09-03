@@ -9,7 +9,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>One Page Wonder - Start Bootstrap Template</title>
+        <title>Log in </title>
 
         <!-- Bootstrap Core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -28,10 +28,62 @@
         <?php
                 include 'common/header.php';
         ?>
+             
+             <?php
+//session_start();           
+if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
+{
+     ?>
+ 
+     <h1>Member Area</h1>
+     <pThanks for logging in! You are <code><?=$_SESSION['Username']?></code> and your email address is <code><?=$_SESSION['EmailAddress']?></code>.</p>
+      
+     <?php
+}
+elseif(!empty($_POST['email']) && !empty($_POST['password']))
+{
+    $con = mysql_connect("localhost","root","");
 
-        <div class="row">
+  if (!$con)
+  {
+    die('Could not connect: ' . mysql_error());
+  }
+
+  mysql_select_db("moneytransfer", $con);
+  
+    
+    $username = mysql_real_escape_string($_POST['email']);
+    $password = mysql_real_escape_string($_POST['password']);
+     
+    $checklogin = mysql_query("SELECT * FROM user WHERE email = '".$username."' AND password = '".$password."'");
+     
+    if(mysql_num_rows($checklogin) == 1)
+    {
+        $row = mysql_fetch_array($checklogin);
+        $email = $row['email'];
+        $display_name = $row['name'];
+        $_SESSION['Username'] = $display_name;
+        $_SESSION['EmailAddress'] = $email;
+        $_SESSION['LoggedIn'] = 1;
+        mysql_close($con);
+        
+        echo "<h1>Success</h1>";
+        echo "<p>We are now redirecting you to the member area.</p>";
+        echo "<meta http-equiv='refresh' content='=12;signin.php' />";
+    }
+    else
+    {
+        echo "<h1>Error</h1>";
+        echo "<p>Sorry, your account could not be found. Please <a href=\"signin.php\">click here to try again</a>.</p>";
+    }
+}
+else
+{
+    ?>
+     
+   <div class="row">
                 <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-                    <form role="form">
+                    <form role="form" action="signin.php" method="post">
                         <h2>Please Sign In <small>It's free and always will be.</small></h2>
                         <hr class="colorgraph">
                         <div class="form-group">
@@ -46,8 +98,8 @@
                         </div>
                         <hr class="colorgraph">
                         <div class="row">
-                            <div class="col-xs-12 col-md-6"><a href="#" class="btn btn-success btn-block btn-lg">Sign In</a></div>
-                            <p>If you have no account <a href="#">registration </a>here</p>
+                            <div class="col-xs-12 col-md-6"><input type="submit" value="Sign In" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+                            <p>If you have no account <a href="signup.php">registration </a>here</p>
                         </div>
                     </form>
 
@@ -55,6 +107,12 @@
             </div>
 
 
+     
+   <?php
+}
+?>
+
+        
             <hr class="featurette-divider">
             <!-- Footer -->
 
