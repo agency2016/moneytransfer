@@ -39,18 +39,18 @@
                         </ul>
 
 
-    <?php
-} else {
-    ?>
+                        <?php
+                    } else {
+                        ?>
                         <ul class="dropdown-menu">
                             <li><a href="signin.php">Sign in</a></li>
                             <li><a href="signup.php">Sign up</a></li>
 
                         </ul>
 
-    <?php
-}
-?>
+                        <?php
+                    }
+                    ?>
 
 
 
