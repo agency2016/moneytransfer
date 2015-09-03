@@ -99,11 +99,12 @@
         </div>
            </div>
 
-        <?php
-            include 'common/footer.php';
-        ?>
+       
         </div>
         <!-- /.container -->
+         <?php
+            include 'common/footer.php';
+        ?>
 
         <!-- jQuery -->
         <script src="js/jquery.js"></script>

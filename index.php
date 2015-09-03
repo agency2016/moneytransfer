@@ -24,43 +24,9 @@
 
     <body>
 
-        <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color:#333333 ; font-weight: bold; font-size: 18px;">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display #4B92C4-->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Money Transaction</a>
-                </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right" style="color: white;">
-                        <li>
-                            <a href="#about">About</a>
-                        </li>
-                        <li>
-                            <a href="#services">Services</a>
-                        </li>
-                        <li>
-                            <a href="signup.php">create an account</a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> <i class="glyphicon glyphicon-chevron-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="signin.php">Sign in</a></li>
-                                <li><a href="signup.php">Sign up</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container -->
-        </nav>
+       <?php
+        include 'common/header.php';
+       ?>
 
         <!-- Full Width Image Header -->
         <header class="header-image" style="background-image: url('assets/image/banner1.jpg'); height: 400px;">
@@ -124,85 +90,8 @@
         </div>
         <!-- /.container -->
 
-
-        <!-- Footer -->
-        <footer class="text-center" style="color: #FFFFFF; background-color: #333333; margin-bottom: 0;">               
-            <br/><div class="footer-above">
-                <div class="container">
-                    <div class="row">
-                        <div class="footer-col col-lg-3">
-                            <div style="text-align: left;">
-                                <h3 style="color: #7e7e7e;">Join our Community</h3><hr/>
-                                <p>about agency delta</p>
-                                <p>contact agency delta</p>
-                                <p>explore agency delta</p>
-                                <p>career agency delta</p>
-                            </div>
-                        </div>
-                        <div class="footer-col col-lg-3">
-                            <div style="text-align: center;">
-                                <h3 style="color: #7e7e7e;">Follow us</h3><hr/>
-                                <ul class="list-inline">
-                                    <li>
-                                        <a href="" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook-square fa-3x"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus-square fa-3x"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="btn-social btn-outline"><i class="fa fa-twitter-square fa-3x"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin-square fa-3x"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble-square fa-3x"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h3 style="color: #7e7e7e;">Email Newsletters</h3>
-                                <p>Subscribe to receive inspiration, ideas, and news in your inbox.</p>
-                                <form>
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-                                    </div>                                 
-
-                                    <button type="submit" class="btn btn-success btn-lg btn-block">Submit</button>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="footer-col col-lg-3">
-                            <div style="text-align: left;">
-                                <h3 style="color: #7e7e7e;">Need any Help?</h3><hr/>
-                                <p>Help Center</p>
-                                <p>Agency Delta Market</p>
-                                <p>Author Term</p>
-                                <p>Contact agency delta</p>
-                            </div>
-                        </div>
-                        <div class="footer-col col-lg-3">
-                            <div style="text-align: left;">
-                                <img src="assets/image/index.jpg" class="img-responsive" alt="Responsive image">
-                                <p>From more flexibility to transfer money <a href="#" role="button">download</a> the mobile application designers and developers are ready to complete your custom jobs.</p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br/><br/>
-            <div class="footer-below">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12" style="color: #7e7e7e;">
-                            Site Design and develop by agency delta .Copyright &copy; agency delta 2015 all right reserve
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
+         <?php include 'common/footer.php';?>
+        
         <!-- jQuery -->
         <script src="js/jquery.js"></script>
 

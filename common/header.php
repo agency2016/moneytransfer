@@ -1,7 +1,7 @@
 <!-- Navigation -->
 <?php session_start(); ?>
 <!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color: #77CCDD;">
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color:#333333 ; font-weight: bold; font-size: 18px;">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -17,14 +17,12 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="#about">About</a>
+                    <a href="index.php">Home</a>
                 </li>
                 <li>
-                    <a href="#services">Services</a>
+                    <a href="transection.php">Transfer Money</a>
                 </li>
-                <li>
-                    <a href="signup.php">Sign Up</a>
-                </li>
+                
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> <i class="glyphicon glyphicon-chevron-down"></i></a>
                     <?php

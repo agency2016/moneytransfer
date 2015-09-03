@@ -139,12 +139,12 @@ else
             <hr class="featurette-divider">
             <!-- Footer -->
 
-            <?php
-                include 'common/footer.php';
-            ?>
+           
         </div>
         <!-- /.container -->
-
+ <?php
+                include 'common/footer.php';
+            ?>
         <!-- jQuery -->
         <script src="js/jquery.js"></script>
 
