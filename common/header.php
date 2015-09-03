@@ -1,6 +1,6 @@
 <!-- Navigation -->
-<?php session_start();?>
-<? //echo $_SESSION['Username'] ;?>
+<?php session_start(); ?>
+<!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color: #77CCDD;">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -17,43 +17,43 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="index.php">Home</a>
+                    <a href="#about">About</a>
                 </li>
                 <li>
-                    <a href="transection.php">Transection</a>
+                    <a href="#services">Services</a>
                 </li>
-
+                <li>
+                    <a href="signup.php">Sign Up</a>
+                </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> <i class="glyphicon glyphicon-chevron-down"></i></a>
                     <?php
-                        if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
-                        {
-                            
-                             ?>
-                             
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Hello !! <?=$_SESSION['Username']?></a></li>
-                                    <li><a href="logout.php">Log Out</a></li>
-                                    <li><a href="signin.php">view Detail</a></li>
-                                </ul>
 
-                             
-                             <?php
-                        }
-                        else{
-                            ?>
-                                <ul class="dropdown-menu">
-                                    <li><a href="signin.php">Sign in</a></li>
-                                    <li><a href="signup.php">Sign up</a></li>
-                        
-                                </ul>
-                             
-                           <?php
-                            
-                        }
+                    if (!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username'])) {
+                        ?>
 
-                    ?>
-                    
+                        <ul class="dropdown-menu">
+                            <li>Hello !! <?= $_SESSION['Username'] ?></li>
+                            <li><a href="logout.php">Log Out</a></li>
+                            <li><a href="signin.php">view Detail</a></li>
+                        </ul>
+
+
+    <?php
+} else {
+    ?>
+                        <ul class="dropdown-menu">
+                            <li><a href="signin.php">Sign in</a></li>
+                            <li><a href="signup.php">Sign up</a></li>
+
+                        </ul>
+
+    <?php
+}
+?>
+
+
+
                 </li>
             </ul>
         </div>
@@ -61,3 +61,6 @@
     </div>
     <!-- /.container -->
 </nav>
+<!--end nav-->
+
+
