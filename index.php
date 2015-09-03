@@ -24,36 +24,39 @@
     </head>
 
     <body>
+        
          <div class="container">
         <?php
                 include 'common/header.php';
         ?>
-        <!-- Full Width Image Header -->
-        <header class="header-image" style="background-image: url('assets/image/banner1.jpg'); height: 400px;">
-            <div class="headline">
-                <div class="container">
-                    <!--                    <h1>One Page Wonder</h1>
-                                        <h2>Will Knock Your Socks Off</h2>-->
-
-<!--                    <div class="row" style="margin-top: -80px;">
-                        <div class="col-lg-4 col-sm-12">
-                            <form>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-                                </div>
-                                <div class="form-group">
-                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                                </div>                                                              
-                                <button type="submit" class="btn btn-default btn-lg btn-block btn-success">Log in</button>
-                            </form>
-                        </div>
-                    </div>-->
-                </div>
-            </div>
-        </header>
-
-        <!-- Page Content -->
        
+            <!-- Full Width Image Header -->
+            <header class="header-image" style="background-image: url('assets/image/banner1.jpg'); height: 400px;">
+                <div class="headline">
+                    <div class="container">
+                        <!--                    <h1>One Page Wonder</h1>
+                                            <h2>Will Knock Your Socks Off</h2>-->
+
+                        <div class="row" style="margin-top: -80px;">
+                            <div class="col-lg-4 col-sm-12">
+                                <form>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                    </div>                                                              
+                                    <button type="submit" class="btn btn-default btn-lg btn-block btn-success">Log in</button>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+
 
 
 
@@ -93,7 +96,7 @@
             <hr class="featurette-divider">
 
             <?php
-                include 'common/footer.php';
+            include 'common/footer.php';
             ?>
         </div>
         <!-- /.container -->
