@@ -15,7 +15,7 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom CSS -->
-        <link href="css/one-page-wonder.css" rel="stylesheet">
+        <link href="css/moneytransfer.css" rel="stylesheet">
 
         <!--cdn-->
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -28,9 +28,33 @@
         <?php
                 include 'common/header.php';
         ?>
-             
-             <?php
-//session_start();           
+             <div class="row">
+                <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+             <div class="custom-msg">
+                            
+                            <?php 
+                           // echo $_SESSION['error'];
+                            if (isset($_SESSION['success']))
+                            {
+
+                              echo '<h4>'.$_SESSION['success'].'</h4>';
+
+                              unset($_SESSION['success']);
+
+                            } 
+                            if (isset($_SESSION['error']))
+                            {
+
+                              echo '<h4>'.$_SESSION['error'].'</h4>';
+
+                              unset($_SESSION['error']);
+
+                            }
+                        ?>
+                            
+             </div>
+ <?php
+
 if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
 {
      ?>
@@ -81,8 +105,7 @@ else
 {
     ?>
      
-   <div class="row">
-                <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+   
                     <form role="form" action="signin.php" method="post">
                         <h2>Please Sign In <small>It's free and always will be.</small></h2>
                         <hr class="colorgraph">
@@ -103,8 +126,7 @@ else
                         </div>
                     </form>
 
-                </div>
-            </div>
+              
 
 
      
@@ -112,7 +134,8 @@ else
 }
 ?>
 
-        
+              </div>
+            </div>
             <hr class="featurette-divider">
             <!-- Footer -->
 

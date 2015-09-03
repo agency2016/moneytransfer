@@ -26,16 +26,33 @@
     <body>
          <div class="container">
         <?php
-                include 'common/header.php';
-                
+                include 'common/header.php';?>
+               <div class="row">
+               <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                    <?php        if (isset($_SESSION['success']))
+                            {
+
+                              echo $_SESSION['success'];
+
+                              unset($_SESSION['success']);
+
+                            } 
+                            if (isset($_SESSION['error']))
+                            {
+
+                              echo $_SESSION['error'];
+
+                              unset($_SESSION['error']);
+
+                            }
+                        
        
              if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
             {
                  ?>
 
                             <!--for logging in! You are <code>-->
-                                <div class="row">
-               <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+            
                    <form role="form" action="insertmoneytransfer.php" method="post">
                        <h2>Transection any amount <small>It's secure and always will be.</small></h2>
                        <hr class="colorgraph">
@@ -69,8 +86,7 @@
                        </div>
                    </form>
 
-               </div>
-           </div>
+               
 
 
                  <?php
@@ -80,7 +96,8 @@
                 
             }
         ?>
-      
+        </div>
+           </div>
 
         <?php
             include 'common/footer.php';

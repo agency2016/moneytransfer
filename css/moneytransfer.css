@@ -8,3 +8,12 @@ and open the template in the editor.
     Author     : agencydelta
 */
 
+.custom-msg{
+    margin: 20px!important;
+}
+.success-msg{
+    color: green;
+}
+.error-msg{
+    color:red;
+}
