@@ -41,7 +41,7 @@
                                         <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
                                     </div>                                 
 
-                                    <button type="submit" class="btn btn-success btn-lg btn-block">Submit</button>
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
                                 </form>
                             </div>
                         </div>
