@@ -1,5 +1,6 @@
+
 <!-- Footer -->
-<footer class="text-center" style="color: #94cbea;">
+<footer class="text-center" style="color: #94cbea;">               
     <div class="footer-above">
         <div class="container">
             <div class="row">
@@ -30,7 +31,7 @@
                 </div>
                 <div class="footer-col col-lg-4">
                     <h3>Call for help</h3>
-<!--                                <img src="assets/image/images (1).jpeg" alt="image loading problem" class="img-circle">-->
+                    <img src="assets/image/images (1).jpeg" alt="image loading problem" class="img-circle">
                     <p style="color: #434343;">Phone: +000000-09</p>
                 </div>
             </div>
