@@ -33,8 +33,8 @@
                              
                                 <ul class="dropdown-menu">
                                     <li>Hello !! <?=$_SESSION['Username']?></li>
-                                    <li><a href="index.php">Log Out</a></li>
-                        
+                                    <li><a href="logout.php">Log Out</a></li>
+                                    <li><a href="signin.php">view Detail</a></li>
                                 </ul>
 
                              
