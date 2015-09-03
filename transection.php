@@ -29,10 +29,14 @@
                 include 'common/header.php';?>
                <div class="row">
                <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-                    <?php        if (isset($_SESSION['success']))
+                     <div class="custom-msg">
+                            
+                            <?php 
+                           // echo $_SESSION['error'];
+                            if (isset($_SESSION['success']))
                             {
 
-                              echo $_SESSION['success'];
+                              echo '<h4>'.$_SESSION['success'].'</h4>';
 
                               unset($_SESSION['success']);
 
@@ -40,11 +44,15 @@
                             if (isset($_SESSION['error']))
                             {
 
-                              echo $_SESSION['error'];
+                              echo '<h4>'.$_SESSION['error'].'</h4>';
 
                               unset($_SESSION['error']);
 
                             }
+                        ?>
+                            
+                        </div>
+             <?php
                         
        
              if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
@@ -92,8 +100,10 @@
                  <?php
             }
             else{
-                echo "Please sign in to transfer your money first";
                 
+                echo "<div class='custom-msg'>";
+                echo "Please sign in to transfer your money first";
+                echo "<div>";
             }
         ?>
         </div>
