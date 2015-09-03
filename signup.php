@@ -9,13 +9,13 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>One Page Wonder - Start Bootstrap Template</title>
+        <title>Sign Up</title>
 
         <!-- Bootstrap Core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom CSS -->
-        <link href="css/one-page-wonder.css" rel="stylesheet">
+        <link href="css/moneytransfer.css" rel="stylesheet">
 
         <!--cdn-->
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -32,26 +32,18 @@
 
                 <div class="row">
                     <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-                        <form role="form">
+                        <form role="form" action="insertuser.php" method="post">
                             <h2>Please Sign Up <small>It's free and always will be.</small></h2>
                             <hr class="colorgraph">
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-6 col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="First Name" tabindex="1">
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-6 col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Last Name" tabindex="2">
-                                    </div>
-                                </div>
+                           
+                            <div class="form-group">
+                                <input type="text" name="display_name" id="display_name" class="form-control input-lg" placeholder="Name" tabindex="3">
                             </div>
                             <div class="form-group">
-                                <input type="number" name="display_name" id="display_name" class="form-control input-lg" placeholder="Phone Number" tabindex="3">
+                                <input type="text" name="phone_number" id="phone_number" class="form-control input-lg" placeholder="Phone Number" tabindex="3">
                             </div>
                             <div class="form-group">
-                                <input type="number" name="display_name" id="display_name" class="form-control input-lg" placeholder="National ID or Passport Number" tabindex="3">
+                                <input type="number" name="amount" id="amount" class="form-control input-lg" placeholder="Account Amount" tabindex="3">
                             </div>
                             <div class="form-group">
                                 <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4">
@@ -64,27 +56,16 @@
                                 </div>
                                 <div class="col-xs-12 col-sm-6 col-md-6">
                                     <div class="form-group">
-                                        <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="6">
+                                        <input type="text" name="pin_number" id="pin_number" class="form-control input-lg" placeholder="Pin Number" tabindex="6">
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-xs-4 col-sm-3 col-md-3">
-                                    <span class="button-checkbox">
-                                        <label>I Agree
-                                            <input type="checkbox" id="blankCheckbox" value="option1" aria-label="">
-                                        </label>
-                                    </span>
-                                </div>
-                                <div class="col-xs-8 col-sm-9 col-md-9">
-                                    By clicking <strong class="label label-primary">Register</strong>, you agree to the our <a href="#" data-toggle="modal" data-target="#t_and_c_m">Terms and Conditions</a>.
-                                </div>
-                            </div>
+                           
 
                             <hr class="colorgraph">
                             <div class="row">
                                 <div class="col-xs-12 col-md-6"><input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
-                                <div class="col-xs-12 col-md-6"><a href="#" class="btn btn-success btn-block btn-lg">Sign In</a></div>
+                                <div class="col-xs-12 col-md-6"><a href="signin.php" class="btn btn-success btn-block btn-lg">Sign In</a></div>
                             </div>
                         </form>
 
