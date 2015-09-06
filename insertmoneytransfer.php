@@ -2,13 +2,7 @@
 <?php
 
 if ($_POST) {
-    $con = mysql_connect("localhost", "root", "");
-
-    if (!$con) {
-        die('Could not connect: ' . mysql_error());
-    }
-
-    mysql_select_db("moneytransfer", $con);
+    include 'connect.php';
     $user_from = $_SESSION['EmailAddress'];
     $user_from_mail = $_SESSION['Username'];
     //echo $user_from;
@@ -34,15 +28,17 @@ if ($_POST) {
 //    exit;
     if ($users_pin != $users_pincheck || $users_pin != $pin) {
 
-        echo "<h2>Check Pin Number!</h2>";
+        //echo "<h2>Check Pin Number!</h2>";
         mysql_close($con);
+        $_SESSION['error'] = '<span class="error-msg" >Insert Necessary Information Correctly!Try ASgain</span>';
         header("Location: /agencyDelta/moneytransfer/transection.php");
         exit(0);
     } 
     else if($amount<= $users_amount){
         
-        echo "<h2>Dont have suficient balance!</h2>";
+       
         mysql_close($con);
+        $_SESSION['error'] = '<span class="error-msg" >Dont have suficient balance!</span>';
         header("Location: /agencyDelta/moneytransfer/transection.php");
         exit(0);
     }
@@ -52,6 +48,7 @@ if ($_POST) {
         $user_obj_to = mysql_fetch_array($get_user_to);
         $to_id = $user_obj_to['id'];
         $to_amount = $user_obj_to['account'];
+        $to_name = $user_obj_to['name'];
         // $sql = "UPDATE user SET lastname='Doe' WHERE id='".."'";
         //update two users 
        // echo $to_id;echo $from_id;exit;
@@ -68,9 +65,10 @@ if ($_POST) {
         mysql_query($sql);
         $sql = "UPDATE user SET account='".$from_current."' WHERE id='".$from_id."'";
         mysql_query($sql);
-
+        $_SESSION['Balance'] =  $from_current;
+        $_SESSION['success'] = '<span class="success-msg" >You have successfully transferred money '.$users_amount.' to '.$to_name.'!</span>';
         mysql_close($con);
-        header("Location: /agencyDelta/moneytransfer/index.php");
+        header("Location: /agencyDelta/moneytransfer/signin.php");
         exit(0);
     }
 }

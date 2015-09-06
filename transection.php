@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,13 +13,13 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Money Tractarians</title>
+        <title>Money Transection</title>
 
         <!-- Bootstrap Core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom CSS -->
-        <link href="css/one-page-wonder.css" rel="stylesheet">
+        <link href="css/moneytransfer.css" rel="stylesheet">
 
         <!--cdn-->
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -24,12 +28,15 @@
     </head>
 
     <body>
-         <div class="container">
+         <div class="container cusrom-wrapper-container">
         <?php
-                include 'common/header.php';?>
-               <div class="row">
-               <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-                     <div class="custom-msg">
+                include 'common/header.php';
+        ?>
+            <hr class="featurette-divider">
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                        <div class="custom-msg">
                             
                             <?php 
                            // echo $_SESSION['error'];
@@ -52,20 +59,46 @@
                         ?>
                             
                         </div>
-             <?php
-                        
-       
-             if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
-            {
-                 ?>
+                    <?php
+             
+                    if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
+                    {
+                         ?>
 
-                            <!--for logging in! You are <code>-->
-            
+                        
                    <form role="form" action="insertmoneytransfer.php" method="post">
                        <h2>Transection any amount <small>It's secure and always will be.</small></h2>
                        <hr class="colorgraph">
                        <div class="form-group">
-                           <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4">
+                           <select id="email" name="email" class="form-control">
+        
+                                <?php
+
+                                $mysqlserver="localhost";
+                                $mysqlusername="root";
+                                $mysqlpassword="";
+                                $link=mysql_connect(localhost, $mysqlusername, $mysqlpassword) or die ("Error connecting to mysql server: ".mysql_error());
+
+                                $dbname = 'moneytransfer';
+                                mysql_select_db($dbname, $link) or die ("Error selecting specified database on mysql server: ".mysql_error());
+
+                                $cdquery="SELECT * FROM user";
+                                $cdresult=mysql_query($cdquery) or die ("Query to get data from firsttable failed: ".mysql_error());
+
+                                while ($cdrow=mysql_fetch_array($cdresult)) {
+                                $cdTitle=$cdrow["email"];
+                                $cdname = $cdrow["name"];
+                                if($_SESSION['EmailAddress'] != $cdTitle)
+                                    echo "<option value='".$cdTitle."'>
+                                        $cdname
+                                    </option>";
+
+                                }
+
+                                ?>
+
+                            </select>
+<!--                           <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4">-->
                        </div>
                        <div class="form-group">
                            <label class="sr-only" for="InputAmount">Amount (in dollars)</label>
@@ -93,29 +126,34 @@
                            <div class="col-xs-12 col-md-6"><input type="submit" value="Send" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
                        </div>
                    </form>
+                         
+                         <?php
+                    } else{
+                        ?>
+                        <ul class="list-unstyled transfer-login-msg">
+                            <li> <h4>Please <a href="signin.php">login </a>first to transfer money !!</h4></li>
+                        </ul>
+                         <?php
+                        
+                        
+                    }      
+                    ?>
+                        
+                        
+                        
 
-               
 
+                    </div>
+                </div>
 
-                 <?php
-            }
-            else{
-                
-                echo "<div class='custom-msg'>";
-                echo "Please sign in to transfer your money first";
-                echo "<div>";
-            }
-        ?>
-        </div>
-           </div>
+            <hr class="featurette-divider">
 
-       
+           
         </div>
         <!-- /.container -->
-         <?php
-            include 'common/footer.php';
-        ?>
-
+             <?php
+                include 'common/footer.php';
+            ?>
         <!-- jQuery -->
         <script src="js/jquery.js"></script>
 
@@ -127,3 +165,25 @@
 </html>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+                   
+            
+
+
+      
+           
+          

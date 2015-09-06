@@ -15,9 +15,12 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom CSS -->
+<<<<<<< Updated upstream
         <link href="css/one-page-wonder.css" rel="stylesheet">
         
         <!--money transfer CSS-->
+=======
+>>>>>>> Stashed changes
         <link href="css/moneytransfer.css" rel="stylesheet">
 
         <!--cdn-->
@@ -37,7 +40,7 @@
                 <div class="container">
                     <div class="row" style="margin-top: -80px;">
                         <div class="col-lg-4 col-sm-12">
-                            <form>
+<!--                            <form>
                                 <div class="form-group">
                                     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
                                 </div>
@@ -45,7 +48,7 @@
                                     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                                 </div>                                                              
                                 <button type="submit" class="btn btn-default btn-lg btn-block btn-success">Log in</button>
-                            </form>
+                            </form>-->
                         </div>
                     </div>
                 </div>
@@ -53,7 +56,7 @@
         </header>
 
         <!-- Page Content -->
-        <div class="container">
+        <div class="container cusrom-wrapper-container">
 
             <hr class="featurette-divider">
 
@@ -68,14 +71,14 @@
 
             <hr class="featurette-divider">
 
-            <!-- Second Featurette -->
+<!--             Second Featurette 
             <div class="featurette" id="services">
-<!--                <img class="featurette-image img-circle img-responsive pull-left" src="http://placehold.it/500x500">
+                <img class="featurette-image img-circle img-responsive pull-left" src="http://placehold.it/500x500">
                 <h2 class="featurette-heading">The Second Heading
                     <span class="text-muted">Is Pretty Cool Too.</span>
-                </h2>-->
+                </h2>
                 <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-            </div>
+            </div>-->
 
             <!--<hr class="featurette-divider">-->
 

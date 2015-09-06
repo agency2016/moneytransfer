@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +10,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Log in </title>
+        <title>Sign In</title>
 
         <!-- Bootstrap Core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -24,13 +25,15 @@
     </head>
 
     <body>
-         <div class="container">
+         <div class="container cusrom-wrapper-container">
         <?php
                 include 'common/header.php';
         ?>
-             <div class="row" class="loginwrapper">
-                <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-             <div class="custom-msg">
+            <hr class="featurette-divider">
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                        <div class="custom-msg">
                             
                             <?php 
                            // echo $_SESSION['error'];
@@ -52,97 +55,63 @@
                             }
                         ?>
                             
-             </div>
- <?php
-
-if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
-{
-     ?>
- 
-     <h1>Member Area</h1>
-     <pThanks for logging in! You are <code><?=$_SESSION['Username']?></code> and your email address is <code><?=$_SESSION['EmailAddress']?></code>.</p>
-      
-     <?php
-}
-elseif(!empty($_POST['email']) && !empty($_POST['password']))
-{
-    $con = mysql_connect("localhost","root","");
-
-  if (!$con)
-  {
-    die('Could not connect: ' . mysql_error());
-  }
-
-  mysql_select_db("moneytransfer", $con);
-  
-    
-    $username = mysql_real_escape_string($_POST['email']);
-    $password = mysql_real_escape_string($_POST['password']);
-     
-    $checklogin = mysql_query("SELECT * FROM user WHERE email = '".$username."' AND password = '".$password."'");
-     
-    if(mysql_num_rows($checklogin) == 1)
-    {
-        $row = mysql_fetch_array($checklogin);
-        $email = $row['email'];
-        $display_name = $row['name'];
-        $_SESSION['Username'] = $display_name;
-        $_SESSION['EmailAddress'] = $email;
-        $_SESSION['LoggedIn'] = 1;
-        mysql_close($con);
-        
-        echo "<h1>Success</h1>";
-        echo "<p>We are now redirecting you to the member area.</p>";
-        echo "<meta http-equiv='refresh' content='=12;signin.php' />";
-    }
-    else
-    {
-        echo "<h1>Error</h1>";
-        echo "<p>Sorry, your account could not be found. Please <a href=\"signin.php\">click here to try again</a>.</p>";
-    }
-}
-else
-{
-    ?>
-     
-   
-                    <form role="form" action="signin.php" method="post">
-                        <h2>Please Sign In <small>It's free and always will be.</small></h2>
-                        <hr class="colorgraph">
-                        <div class="form-group">
-                            <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4">
                         </div>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12">
-                                <div class="form-group">
-                                    <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="5">
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="colorgraph">
-                        <div class="row">
-                            <div class="col-xs-12 col-md-6"><input type="submit" value="Sign In" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
-                            <p>If you have no account <a href="signup.php">registration </a>here</p>
-                        </div>
-                    </form>
+                    <?php
+             
+                    if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
+                    {
+                         ?>
 
-              
+                         <h1>Member Area</h1>
+                         <table class="table table-striped">
+                             
+                             <tr><td>Name :</td><td><?=$_SESSION['Username']?></td></tr>
+                             <tr><td>Email :</td><td><?=$_SESSION['EmailAddress']?></td></tr>
+                             <tr><td>Your Balance :</td><td><?=$_SESSION['Balance']?></td></tr>
+                         </table>
+                         
+                         <?php
+                    } else{
+                        ?>
+                            <form role="form" action="login.php" method="post">
+                                    <h2>Please Sign In <small>It's free and always will be.</small></h2>
+                                    <hr class="colorgraph">
+                                    <div class="form-group">
+                                        <input type="email" name="email" id="email" required="true"class="form-control input-lg" placeholder="Email Address" tabindex="4">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-12">
+                                            <div class="form-group">
+                                                <input type="password" name="password" required="true" id="password" class="form-control input-lg" placeholder="Password" tabindex="5">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="colorgraph">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-md-6"><input type="submit" value="Sign In" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+                                        <p>If you have no account <a href="signup.php">registration </a>here</p>
+                                    </div>
+                           </form>
+                         
+                         <?php
+                        
+                        
+                    }      
+                    ?>
+                        
+                        
+                        
 
 
-     
-   <?php
-}
-?>
+                    </div>
+                </div>
 
-              </div>
-            </div>
             <hr class="featurette-divider">
-            <!-- Footer -->
 
            
         </div>
         <!-- /.container -->
- <?php
+             <?php
                 include 'common/footer.php';
             ?>
         <!-- jQuery -->
@@ -155,6 +124,24 @@ else
 
 </html>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+                   
+            
 
 
       

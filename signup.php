@@ -24,7 +24,7 @@
     </head>
 
     <body>
-         <div class="container">
+         <div class="container cusrom-wrapper-container">
         <?php
                 include 'common/header.php';
         ?>
