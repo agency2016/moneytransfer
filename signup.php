@@ -60,7 +60,7 @@
                             <input type="text" name="display_name" required="true" id="display_name" class="form-control input-lg" placeholder="Name" tabindex="3">
                         </div>
                         <div class="form-group">
-                            <input type="text" name="phone_number" id="phone_number" class="form-control input-lg" placeholder="Phone Number" tabindex="3">
+                            <input type="text" name="phone_number" id="phone_number" class="form-control input-lg" placeholder="Passport/Birth Certificate Number" tabindex="3">
                         </div>
                         <div class="form-group">
                             <input type="number" name="amount" required="true" id="amount" class="form-control input-lg" placeholder="Account Amount" tabindex="3">

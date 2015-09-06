@@ -64,7 +64,7 @@
                     <?php
              
                     if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
-                    {
+                    {     
                          ?>
 
                          <h1>Member Area</h1>
@@ -72,6 +72,7 @@
                              
                              <tr><td>Name :</td><td><?=$_SESSION['Username']?></td></tr>
                              <tr><td>Email :</td><td><?=$_SESSION['EmailAddress']?></td></tr>
+                             <tr><td>Passport/Birth Certificate Number :</td><td><?=$_SESSION['pass']?></td></tr>
                              <tr><td>Your Balance :</td><td><?=$_SESSION['Balance']?></td></tr>
                          </table>
                          
