@@ -74,7 +74,7 @@
                        <hr class="colorgraph">
                        <div class="form-group">
                            <select id="email" name="email" class="form-control">
-        
+                               <option value="0" selected="true"> Select a Name</option>
                                 <?php
 
                                 $mysqlserver="localhost";
