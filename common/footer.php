@@ -6,10 +6,10 @@
                         <div class="footer-col col-lg-3">
                             <div style="text-align: left;">
                                 <h3 style="color: #7e7e7e;">Join our Community</h3><hr/>
-                                <p>about agency delta</p>
-                                <p>contact agency delta</p>
-                                <p>explore agency delta</p>
-                                <p>career agency delta</p>
+                                <p><a href="" class="mt-anchore">about agency delta</a></p>
+                                <p><a href="" class="mt-anchore">contact agency delta</a></p>
+                                <p><a href="" class="mt-anchore">explore agency delta</a></p>
+                                <p><a href="" class="mt-anchore">career agency delta</a></p>
                             </div>
                         </div>
                         <div class="footer-col col-lg-3">
@@ -48,10 +48,10 @@
                         <div class="footer-col col-lg-3">
                             <div style="text-align: left;">
                                 <h3 style="color: #7e7e7e;">Need any Help?</h3><hr/>
-                                <p>Help Center</p>
-                                <p>Agency Delta Market</p>
-                                <p>Author Term</p>
-                                <p>Contact agency delta</p>
+                                <p><a href="" class="mt-anchore">Help Center</a></p>
+                                <p><a href="" class="mt-anchore">Agency Delta Market</a></p>
+                                <p><a href="" class="mt-anchore">Author Term</a></p>
+                                <p><a href="" class="mt-anchore">Contact agency delta</a></p>
                             </div>
                         </div>
                         <div class="footer-col col-lg-3">

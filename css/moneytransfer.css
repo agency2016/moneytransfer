@@ -17,6 +17,16 @@ and open the template in the editor.
 .error-msg{
     color:red;
 }
+<<<<<<< Updated upstream
 .loginwrapper{
     margin-top: 40px!important;
+=======
+.mt-anchore{
+    color: #d6d6d6;
+}
+
+.mt-anchore:hover{
+    color: #FFFFFF;
+    text-decoration: none;
+>>>>>>> Stashed changes
 }
