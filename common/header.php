@@ -23,6 +23,9 @@
                 <li>
                     <a href="transection.php">Transfer Money</a>
                 </li>
+                <li>
+                    <a href="transferhistory.php">Recent Transfer</a>
+                </li>
                 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> <i class="glyphicon glyphicon-chevron-down"></i></a>

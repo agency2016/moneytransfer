@@ -16,11 +16,13 @@ if ($_POST) {
             $balance = $row['account'];
             $passport = $row['phone'];
             $display_name = $row['name'];
+            $user_id = $row['id'];
             $_SESSION['Username'] = $display_name;
             $_SESSION['EmailAddress'] = $email;
             $_SESSION['LoggedIn'] = 1;
             $_SESSION['Balance'] = $balance;
             $_SESSION['pass'] = $passport;
+            $_SESSION['id'] = $user_id;
             mysql_close($con);
             $_SESSION['success'] = '<span class="error-msg" >Logged in Success!!</span>';
             header("Location: /agencyDelta/moneytransfer/signin.php");
