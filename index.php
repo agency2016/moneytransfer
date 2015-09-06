@@ -15,12 +15,9 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom CSS -->
-<<<<<<< Updated upstream
         <link href="css/one-page-wonder.css" rel="stylesheet">
         
         <!--money transfer CSS-->
-=======
->>>>>>> Stashed changes
         <link href="css/moneytransfer.css" rel="stylesheet">
 
         <!--cdn-->

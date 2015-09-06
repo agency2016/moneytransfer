@@ -18,13 +18,9 @@
         <!-- Bootstrap Core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Custom CSS -->
-<<<<<<< HEAD
-        <link href="css/one-page-wonder.css" rel="stylesheet">
+       
         
          <!--money transfer CSS-->
-=======
->>>>>>> origin/master
         <link href="css/moneytransfer.css" rel="stylesheet">
 
         <!--cdn-->
@@ -34,31 +30,19 @@
     </head>
 
     <body>
-<<<<<<< HEAD
-
-        <?php
-        include 'common/header.php';
-        ?>
-        <div class="container">
+       
+        <div class="container cusrom-wrapper-container">
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-                    <div class="custom-msg">
-=======
-         <div class="container cusrom-wrapper-container">
+                    
+
+         
         <?php
                 include 'common/header.php';
         ?>
             <hr class="featurette-divider">
 
-                <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-                        <div class="custom-msg">
-                            
-                            <?php 
-                           // echo $_SESSION['error'];
-                            if (isset($_SESSION['success']))
-                            {
->>>>>>> origin/master
+               <div class="custom-msg">
 
                         <?php
                         // echo $_SESSION['error'];
@@ -77,70 +61,7 @@
                         ?>
 
                     </div>
-                    <?php
-                    if (!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username'])) {
-                        ?>
-<<<<<<< HEAD
-
-                                                                        <!--for logging in! You are <code>-->
-
-                        <form role="form" action="insertmoneytransfer.php" method="post">
-                            <h2>Transection any amount <small>It's secure and always will be.</small></h2>
-                            <hr class="colorgraph">
-                            <div class="form-group">
-                                <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4">
-                            </div>
-                            <div class="form-group">
-                                <label class="sr-only" for="InputAmount">Amount (in dollars)</label>
-                                <div class="input-group">
-                                    <div class="input-group-addon">৳</div>
-                                    <input type="text" class="form-control input-lg" name="amount" id="amount" placeholder="Amount">
-                                    <div class="input-group-addon">.00</div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-6 col-md-6">
-                                    <div class="form-group">
-                                        <input type="password" name="pin" id="pin" class="form-control input-lg" placeholder="Pin" tabindex="5">
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-6 col-md-6">
-                                    <div class="form-group">
-                                        <input type="password" name="pin_check" id="pin_check" class="form-control input-lg" placeholder="Confirm Pin" tabindex="6">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <hr class="colorgraph">
-                            <div class="row">
-                                <div class="col-xs-12 col-md-6"><input type="submit" value="Send" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
-                            </div>
-                        </form>
-
-
-
-
-                        <?php
-                    } else {
-                        ?>
-                        <div class="info">
-                            <i class="fa fa-info-circle fa-3x"></i>
-                                <h4>Please sign in to transfer your money first</h4>
-                        </div>
-                        <?php
-                    }
-                    ?>
-                </div>
-            </div>
-        </div>
-        <!-- /.container -->
-        <?php
-        include 'common/footer.php';
-        ?>
-
-=======
-                            
-                        </div>
+                   
                     <?php
              
                     if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
@@ -236,7 +157,7 @@
              <?php
                 include 'common/footer.php';
             ?>
->>>>>>> origin/master
+
         <!-- jQuery -->
         <script src="js/jquery.js"></script>
 

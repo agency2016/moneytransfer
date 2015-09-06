@@ -24,18 +24,14 @@
     </head>
 
     <body>
-<<<<<<< HEAD
-
-=======
-         <div class="container cusrom-wrapper-container">
->>>>>>> origin/master
         <?php
         include 'common/header.php';
         ?>
-        <div class="container">
-            <hr class="featurette-divider">
+         <div class="container cusrom-wrapper-container">
+           
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                     <hr class="featurette-divider">
                     <div class="custom-msg">
 
                         <?php
