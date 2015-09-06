@@ -12,6 +12,7 @@ and open the template in the editor.
 }
 .cusrom-wrapper-container{
     min-height: 500px;
+    margin-top: 50px;
 }
 .custom-msg{
     margin-top: 20px!important;
