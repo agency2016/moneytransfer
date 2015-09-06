@@ -24,86 +24,79 @@
     </head>
 
     <body>
-         <div class="container">
+
         <?php
-                include 'common/header.php';
+        include 'common/header.php';
         ?>
+        <div class="container">
             <hr class="featurette-divider">
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                    <div class="custom-msg">
 
-                <div class="row">
-                    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-                        <div class="custom-msg">
-                            
-                            <?php 
-                           // echo $_SESSION['error'];
-                            if (isset($_SESSION['success']))
-                            {
+                        <?php
+                        // echo $_SESSION['error'];
+                        if (isset($_SESSION['success'])) {
 
-                              echo '<h4>'.$_SESSION['success'].'</h4>';
+                            echo '<h4>' . $_SESSION['success'] . '</h4>';
 
-                              unset($_SESSION['success']);
+                            unset($_SESSION['success']);
+                        }
+                        if (isset($_SESSION['error'])) {
 
-                            } 
-                            if (isset($_SESSION['error']))
-                            {
+                            echo '<h4>' . $_SESSION['error'] . '</h4>';
 
-                              echo '<h4>'.$_SESSION['error'].'</h4>';
-
-                              unset($_SESSION['error']);
-
-                            }
+                            unset($_SESSION['error']);
+                        }
                         ?>
-                            
-                        </div>
-                           
-                        <form role="form" action="insertuser.php" method="post">
-                            <h2>Please Sign Up <small>It's free and always will be.</small></h2>
-                            <hr class="colorgraph">
-                           
-                            <div class="form-group">
-                                <input type="text" name="display_name" required="true" id="display_name" class="form-control input-lg" placeholder="Name" tabindex="3">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" name="phone_number" id="phone_number" class="form-control input-lg" placeholder="Phone Number" tabindex="3">
-                            </div>
-                            <div class="form-group">
-                                <input type="number" name="amount" required="true" id="amount" class="form-control input-lg" placeholder="Account Amount" tabindex="3">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" name="email" id="email" required="true" class="form-control input-lg" placeholder="Email Address" tabindex="4">
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-6 col-md-6">
-                                    <div class="form-group">
-                                        <input type="password" name="password" required="true" id="password" class="form-control input-lg" placeholder="Password" tabindex="5">
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-6 col-md-6">
-                                    <div class="form-group">
-                                        <input type="text" name="pin_number" required="true" id="pin_number" class="form-control input-lg" placeholder="Pin Number" tabindex="6">
-                                    </div>
-                                </div>
-                            </div>
-                           
-
-                            <hr class="colorgraph">
-                            <div class="row">
-                                <div class="col-xs-12 col-md-6"><input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
-                                <div class="col-xs-12 col-md-6"><a href="signin.php" class="btn btn-success btn-block btn-lg">Sign In</a></div>
-                            </div>
-                        </form>
 
                     </div>
+
+                    <form role="form" action="insertuser.php" method="post">
+                        <h2>Please Sign Up <small>It's free and always will be.</small></h2>
+                        <hr class="colorgraph">
+
+                        <div class="form-group">
+                            <input type="text" name="display_name" required="true" id="display_name" class="form-control input-lg" placeholder="Name" tabindex="3">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="phone_number" id="phone_number" class="form-control input-lg" placeholder="Phone Number" tabindex="3">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="amount" required="true" id="amount" class="form-control input-lg" placeholder="Account Amount" tabindex="3">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" required="true" class="form-control input-lg" placeholder="Email Address" tabindex="4">
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="password" name="password" required="true" id="password" class="form-control input-lg" placeholder="Password" tabindex="5">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="pin_number" required="true" id="pin_number" class="form-control input-lg" placeholder="Pin Number" tabindex="6">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <hr class="colorgraph">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6"><input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+                            <div class="col-xs-12 col-md-6"><a href="signin.php" class="btn btn-success btn-block btn-lg">Sign In</a></div>
+                        </div>
+                    </form>
+
                 </div>
-
-            <hr class="featurette-divider">
-
-           
+            </div>
         </div>
+        <hr/>
         <!-- /.container -->
-             <?php
-                include 'common/footer.php';
-            ?>
+<?php
+include 'common/footer.php';
+?>
         <!-- jQuery -->
         <script src="js/jquery.js"></script>
 

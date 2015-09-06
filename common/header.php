@@ -1,4 +1,3 @@
-<!-- Navigation -->
 <?php session_start(); ?>
 <!-- Navigation -->
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color:#333333 ; font-weight: bold; font-size: 18px;">
@@ -11,7 +10,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Money Transaction</a>
+            <a class="navbar-brand" href="index.php">MoneyTransfer</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
