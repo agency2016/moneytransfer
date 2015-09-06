@@ -10,11 +10,9 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-<<<<<<< HEAD
-            <a class="navbar-brand" href="index.php">MoneyTransfer</a>
-=======
+
             <a class="navbar-brand" href="index.php">Money Transaction</a>
->>>>>>> origin/master
+
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
