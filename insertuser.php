@@ -5,9 +5,9 @@ if ($_POST) {
 
     $users_name = mysql_real_escape_string($_POST['display_name']);
     $users_email = mysql_real_escape_string($_POST['email']);
-    $users_password = mysql_real_escape_string($_POST['password']);
-    $users_phone = mysql_real_escape_string($_POST['phone_number']);
-    $users_pin = mysql_real_escape_string($_POST['pin_number']);
+    $users_password = ($_POST['password']);
+    $users_phone = ($_POST['phone_number']);
+    $users_pin = ($_POST['pin_number']);
     $user_amount = mysql_real_escape_string($_POST['amount']);
     //checking
     $checklogin = mysql_query("SELECT * FROM user WHERE email = '".$users_email."' OR name = '".$users_name."'");
@@ -32,7 +32,7 @@ if ($_POST) {
             INSERT INTO `moneytransfer`.`user` (`id`, `name`, `email`, `pin`,
                   `account`, `password`, `phone`) VALUES (NULL, '$users_name',
                   '$users_email', '$users_pin', '$user_amount',
-                  $users_password, '$users_phone');";
+                  '$users_password', '$users_phone');";
 
               mysql_query($query);
 
