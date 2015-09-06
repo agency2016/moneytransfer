@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +10,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Log in </title>
+        <title>Sign In</title>
 
         <!-- Bootstrap Core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -27,13 +28,30 @@
     </head>
 
     <body>
+<<<<<<< HEAD
+=======
+         <div class="container cusrom-wrapper-container">
+>>>>>>> origin/master
         <?php
         include 'common/header.php';
         ?>
+<<<<<<< HEAD
         <div class="container">
             <div class="row" class="loginwrapper">
                 <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
                     <div class="custom-msg">
+=======
+            <hr class="featurette-divider">
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                        <div class="custom-msg">
+                            
+                            <?php 
+                           // echo $_SESSION['error'];
+                            if (isset($_SESSION['success']))
+                            {
+>>>>>>> origin/master
 
                         <?php
                         // echo $_SESSION['error'];
@@ -55,6 +73,7 @@
                     <?php
                     if (!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username'])) {
                         ?>
+<<<<<<< HEAD
 
                         <h1>Member Area</h1>
                         <pThanks for logging in! You are <code><?= $_SESSION['Username'] ?></code> and your email address is <code><?= $_SESSION['EmailAddress'] ?></code>.</p>
@@ -121,6 +140,61 @@
 
 
 
+=======
+                            
+                        </div>
+                    <?php
+             
+                    if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
+                    {
+                         ?>
+
+                         <h1>Member Area</h1>
+                         <table class="table table-striped">
+                             
+                             <tr><td>Name :</td><td><?=$_SESSION['Username']?></td></tr>
+                             <tr><td>Email :</td><td><?=$_SESSION['EmailAddress']?></td></tr>
+                             <tr><td>Your Balance :</td><td><?=$_SESSION['Balance']?></td></tr>
+                         </table>
+                         
+                         <?php
+                    } else{
+                        ?>
+                            <form role="form" action="login.php" method="post">
+                                    <h2>Please Sign In <small>It's free and always will be.</small></h2>
+                                    <hr class="colorgraph">
+                                    <div class="form-group">
+                                        <input type="email" name="email" id="email" required="true"class="form-control input-lg" placeholder="Email Address" tabindex="4">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-12">
+                                            <div class="form-group">
+                                                <input type="password" name="password" required="true" id="password" class="form-control input-lg" placeholder="Password" tabindex="5">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr class="colorgraph">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-md-6"><input type="submit" value="Sign In" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+                                        <p>If you have no account <a href="signup.php">registration </a>here</p>
+                                    </div>
+                           </form>
+                         
+                         <?php
+                        
+                        
+                    }      
+                    ?>
+                        
+                        
+                        
+
+
+                    </div>
+                </div>
+
+            <hr class="featurette-divider">
+>>>>>>> origin/master
 
                             <?php
                         }
@@ -129,11 +203,17 @@
             </div>
         </div>
         <!-- /.container -->
+<<<<<<< HEAD
 
         <!-- Footer -->
         <?php
         include 'common/footer.php';
         ?>
+=======
+             <?php
+                include 'common/footer.php';
+            ?>
+>>>>>>> origin/master
         <!-- jQuery -->
         <script src="js/jquery.js"></script>
 
@@ -149,3 +229,24 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+
+   
+                   
+            
+
+
+      
+           
+          
+>>>>>>> origin/master

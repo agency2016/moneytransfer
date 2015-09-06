@@ -12,20 +12,21 @@ if ($_POST) {
     //checking
     $checklogin = mysql_query("SELECT * FROM user WHERE email = '".$users_email."' OR name = '".$users_name."'");
 
-    if (mysql_num_rows($checklogin) >= 1) {
+    if (is_null($users_password) || empty($users_password) || is_null($users_pin) || empty($users_pin)) {
+        mysql_close($con);
+        $_SESSION['error'] = '<span class="error-msg" >Insert Necessary Information!Try again</span>';
+        header("Location: /agencyDelta/moneytransfer/signup.php");
+        //exit(0);
+        //echo 'i am here2';
+    }
+    elseif (mysql_num_rows($checklogin) >= 1) {
         
         mysql_close($con);
         $_SESSION['error'] = '<span class="error-msg" >User already exist with this name or email!Try again</span>';
         header("Location: /agencyDelta/moneytransfer/signup.php");
         //exit(0);
         //echo $_SESSION['error'];
-    } elseif (is_null($users_password) || empty($users_password) || is_null($users_pin) || empty($users_pin)) {
-        mysql_close($con);
-        $_SESSION['error'] = '<span class="error-msg" >Insert Necessary InformationS!Try again</span>';
-        header("Location: /agencyDelta/moneytransfer/signup.php");
-        //exit(0);
-        //echo 'i am here2';
-    }
+    } 
     else{
         $query = "
             INSERT INTO `moneytransfer`.`user` (`id`, `name`, `email`, `pin`,

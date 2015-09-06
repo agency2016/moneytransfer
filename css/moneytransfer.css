@@ -7,9 +7,15 @@ and open the template in the editor.
     Created on : Sep 3, 2015, 10:56:48 AM
     Author     : agencydelta
 */
-
+.transfer-login-msg{
+    margin-top: 100px;
+}
+.cusrom-wrapper-container{
+    min-height: 500px;
+}
 .custom-msg{
-    margin: 20px!important;
+    margin-top: 20px!important;
+    margin-bottom: 20px!important;
 }
 .success-msg{
     color: green;

@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <!-- Navigation -->
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color:#333333 ; font-weight: bold; font-size: 18px;">
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color:#333333 ; font-weight: bold; font-size: 14px;">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -10,7 +10,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+<<<<<<< HEAD
             <a class="navbar-brand" href="index.php">MoneyTransfer</a>
+=======
+            <a class="navbar-brand" href="index.php">Money Transaction</a>
+>>>>>>> origin/master
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -30,7 +34,7 @@
                         ?>
 
                         <ul class="dropdown-menu">
-                            <li>Hello !! <?= $_SESSION['Username'] ?></li>
+                            <li><a>Hello !! <?= $_SESSION['Username'] ?></a></li>
                             <li><a href="logout.php">Log Out</a></li>
                             <li><a href="signin.php">view Detail</a></li>
                         </ul>
