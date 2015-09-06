@@ -70,10 +70,10 @@
                          <h1>Member Area</h1>
                          <table class="table table-striped">
                              
-                             <tr><td>Name :</td><td><?=$_SESSION['Username']?></td></tr>
+                             <tr><td><h4>Name :</h4></td><td><h4><?=$_SESSION['Username']?></td></h4></tr>
                              <tr><td>Email :</td><td><?=$_SESSION['EmailAddress']?></td></tr>
                              <tr><td>Passport/Birth Certificate Number :</td><td><?=$_SESSION['pass']?></td></tr>
-                             <tr><td>Your Balance :</td><td><?=$_SESSION['Balance']?></td></tr>
+                             <tr><td><h3>Your Balance :</h3></td><td><h3><?=$_SESSION['Balance']?></td></h3></tr>
                          </table>
                          
                          <?php
