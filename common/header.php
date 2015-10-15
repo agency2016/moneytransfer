@@ -1,4 +1,5 @@
 <?php session_start(); ?>
+<?php error_reporting(E_ERROR); ?>
 <!-- Navigation -->
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color:#333333 ; font-weight: bold; font-size: 14px;">
     <div class="container">

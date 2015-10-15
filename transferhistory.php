@@ -76,9 +76,7 @@
                                 $dbname = 'moneytransfer';
                                 mysql_select_db($dbname, $link) or die ("Error selecting specified database on mysql server: ".mysql_error());
 
-                                $cdquery="SELECT * FROM transfer_history";
-                                $cdresult=mysql_query($cdquery) or die ("Query to get data from firsttable failed: ".mysql_error());
-
+                              
                         
                          ?>
 
@@ -91,18 +89,22 @@
                            <tr><td>To User</td> <td>Amount</td></tr>
                            <?php
                                 $checklogin = '';
+                                $to_user =$_SESSION['id'];
+                                $cdquery="SELECT * FROM transfer_history WHERE to_user = '".$to_user."'";
+                                $cdresult=mysql_query($cdquery) or die ("Query to get data from firsttable failed: ".mysql_error());
+
                                 while ($cdrow=mysql_fetch_array($cdresult)) {
                                 $cdfromuser=$cdrow["from_user"];
                                 $cdto_user = $cdrow["to_user"];
                                 $cdamount = $cdrow['amount'];
                                 
-                                if($_SESSION['id'] == $cdto_user)
+                                
                                     $checklogin = mysql_query("SELECT * FROM user WHERE id = '".$cdfromuser."'");
-                                     if(mysql_num_rows($checklogin) == 1)
+                                     if(mysql_num_rows($checklogin) >= 1)
                                     {
                                       
                                     $row = mysql_fetch_array($checklogin);
-                                    echo "<td>".$row['name']."</td><td>".$cdamount."</td>";
+                                    echo "<tr><td>".$row['name']."</td><td>".$cdamount."</td></tr>";
                                     }
                                 }
 
@@ -113,19 +115,22 @@
                        <table class="table table-striped">
                            <tr><td>From User</td> <td>Amount</td></tr>
                            <?php
-                                
+                                $to_user =$_SESSION['id'];
+                                $cdquery="SELECT * FROM transfer_history WHERE from_user = '".$to_user."'";
+                                $cdresult=mysql_query($cdquery) or die ("Query to get data from firsttable failed: ".mysql_error());
+
                                 while ($cdrow=mysql_fetch_array($cdresult)) {
                                 $cdfromuser=$cdrow["from_user"];
                                 $cdto_user = $cdrow["to_user"];
                                 $cdamount = $cdrow['amount'];
-                                if($_SESSION['id'] == $cdfromuser)
+                                
                                     $checklogin = mysql_query("SELECT * FROM user WHERE id = '".$cdto_user."'");
-                                     if(mysql_num_rows($checklogin) == 1)
+                                     if(mysql_num_rows($checklogin) >= 1)
                                     {
 
                                                                 $row = mysql_fetch_array($checklogin);
-                                                                echo "<td>".$row['name']."</td><td>".$cdamount."</td>";
-                                                                echo "<td>".$cdto_user."</td><td>".$cdamount."</td>";
+                                                                echo "<tr><td>".$row['name']."</td><td>".$cdamount."</td></tr>";
+                                                                //echo "<td>".$cdto_user."</td><td>".$cdamount."</td>";
                                     }
                                 }
 
